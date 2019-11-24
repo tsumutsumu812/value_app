@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ValueApp</title>
+    <title><%=yield(:title)%>○みんなの価値観共有</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,7 +20,13 @@
         <%= link_to "Home","/",class:"nav-link" %>
       </li>
       <li class="nav-item">
+        <%= link_to "about", "/home/about", class:"nav-lnk" %>
+      </li>
+      <li class="nav-item">
         <%= link_to "投稿一覧", "/posts", class:"nav-lnk" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "ユーザー一覧", "/users", class:"nav-lnk" %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
